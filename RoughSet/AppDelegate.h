@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoughtSetObject.h"
+#import "DataElement.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

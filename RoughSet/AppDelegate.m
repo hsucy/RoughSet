@@ -14,7 +14,146 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    // Matrix
+    NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
+    //2, 1, 3
+    DataElement* Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:@"2" forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"2" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"1";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //3, 2, 1
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"3" forKey:@"d1"];
+    [Objtemp.degree setObject:@"1" forKey:@"d2"];
+    
+    Objtemp.serialno = @"2";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //2, 1, 3
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"2" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"3";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //2, 2, 3
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"3" forKey:@"d1"];
+    [Objtemp.degree setObject:@"1" forKey:@"d2"];
+    
+    Objtemp.serialno = @"4";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //1, 1, 4
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:4] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"1" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"5";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //1, 1, 2
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"1" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"6";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //3, 2, 1
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"3" forKey:@"d1"];
+    [Objtemp.degree setObject:@"1" forKey:@"d2"];
+    
+    Objtemp.serialno = @"7";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //1, 1, 4
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:4] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"1" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"8";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //2, 1, 3
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"2" forKey:@"d1"];
+    [Objtemp.degree setObject:@"3" forKey:@"d2"];
+    
+    Objtemp.serialno = @"9";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    //3, 2, 1
+    Objtemp = [[DataElement alloc] init];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:3] forKey:@"param1"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:2] forKey:@"param2"];
+    [Objtemp.dictAttribute setObject:[NSNumber numberWithInt:1] forKey:@"param3"];
+    
+    [Objtemp.degree setObject:@"3" forKey:@"d1"];
+    [Objtemp.degree setObject:@"1" forKey:@"d2"];
+    
+    Objtemp.serialno = @"10";
+    [dict setObject:Objtemp forKey:[Objtemp getKey]];
+    [Objtemp release];
+    
+    NSArray *xset = [NSArray arrayWithObjects:@"x00001", @"x00003", @"x00004",@"x00005", @"x00009", nil];
+    
+    RoughtSetObject *myClass = [[RoughtSetObject alloc] init];
+    [myClass RoughSetConstructure:dict];
+    [myClass DecisionTable];
+    [myClass LowerAndUpperApproximations:xset];
+    /*
+    [myClass IndiscernibilityRelation];
+    [myClass LowerAndUpperApproximations:xset];
+    [myClass IndependenceOfAttributes];
+    [myClass CoreAndReductOfAttributes];
+    */
+    [dict release];
+    [myClass release];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
